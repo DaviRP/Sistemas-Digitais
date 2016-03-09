@@ -5,14 +5,15 @@ module Led(
 
 );
 
-    assign led=clk,
+    assign led=clk;
 
 endmodule
 
-modulo exec;
+module exec;
 
-    reg clk,
-    always #2 clk= ~clik;
+    reg clk;
+    wire led;
+    always #2 clk= ~clk;
 
 
     Led L(clk,led);
