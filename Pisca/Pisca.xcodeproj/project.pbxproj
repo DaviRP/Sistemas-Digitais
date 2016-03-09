@@ -1,0 +1,72 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		083A2FB91C8FA6A300A9BECE /* Led.v */ = {isa = PBXFileReference; lastKnownFileType = text; path = Led.v; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		083A2FB21C8FA68C00A9BECE = {
+			isa = PBXGroup;
+			children = (
+				083A2FB91C8FA6A300A9BECE /* Led.v */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		083A2FB31C8FA68C00A9BECE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+			};
+			buildConfigurationList = 083A2FB61C8FA68C00A9BECE /* Build configuration list for PBXProject "Pisca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 083A2FB21C8FA68C00A9BECE;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		083A2FB71C8FA68C00A9BECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		083A2FB81C8FA68C00A9BECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		083A2FB61C8FA68C00A9BECE /* Build configuration list for PBXProject "Pisca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083A2FB71C8FA68C00A9BECE /* Debug */,
+				083A2FB81C8FA68C00A9BECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 083A2FB31C8FA68C00A9BECE /* Project object */;
+}
