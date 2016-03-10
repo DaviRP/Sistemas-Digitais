@@ -6,14 +6,10 @@
     );
 
         always@(posedge in)
-            in= ~in;
+          assign in = ~in;
 
     endmodule
 
-
-
-
-    endmodule
 
 
     module count(
@@ -25,23 +21,13 @@
 
 
     );
-    reg [31:0] aux;
+        reg [31:0] aux;
 
-    
-    always@(posedge clk)
 
-    if(reset)begin
-        out<=32'b0;
-    end else
+        always@(posedge clk) aux <= aux +1;
 
-        out<=out+1;
-    end
+        assign out=aux[31];
 
-    if(aux == )
-        out<=1'b1;
-        end else
-        out<= 1'b0;
-        end
 
     endmodule
 
@@ -49,14 +35,18 @@
     module Main;
 
         input clk, enable;
-        wire reset, enable, out;
+        wire  in, reset,enable, out, led;
 
+        always@(posedge clk);
             count C(  out ,clk     ,  reset  ,   enable );
+        assign in =out
+        LedPulse LP(   in ,led   );
 
-        LedPulse LP(   out ,led   );
-        assing reset <= led;
 
-        end
+
+        //assign reset <= led;
+
+
     endmodule
 
 
