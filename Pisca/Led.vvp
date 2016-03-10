@@ -1,0 +1,37 @@
+#! /opt/local/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fc403600440 .scope module, "exec" "exec" 2 12;
+ .timescale 0 0;
+v0x7fc4036106b0_0 .var "clk", 0 0;
+v0x7fc403610740_0 .net "led", 0 0, L_0x7fc4036107e0; 1 drivers
+S_0x7fc403600520 .scope module, "L" "Led" 2 18, 2 1, S_0x7fc403600440;
+ .timescale 0 0;
+L_0x7fc4036107e0 .functor BUFZ 1, v0x7fc4036106b0_0, C4<0>, C4<0>, C4<0>;
+v0x7fc403600600_0 .net "clk", 0 0, v0x7fc4036106b0_0; 1 drivers
+v0x7fc403610620_0 .alias "led", 0 0, v0x7fc403610740_0;
+    .scope S_0x7fc403600440;
+T_0 ;
+    %delay 2, 0;
+    %load/v 8, v0x7fc4036106b0_0, 1;
+    %inv 8, 1;
+    %set/v v0x7fc4036106b0_0, 8, 1;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x7fc403600440;
+T_1 ;
+    %vpi_call 2 22 "$dumpvars", 1'sb0, S_0x7fc403600520;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x7fc4036106b0_0, 0, 0;
+    %delay 500, 0;
+    %vpi_call 2 26 "$finish";
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Led.v";

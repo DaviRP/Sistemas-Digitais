@@ -13,14 +13,14 @@ module exec;
 
     reg clk;
     wire led;
-    always #2 clk= ~clk;
 
 
     Led L(clk,led);
+    always #1 clk= ~clk;
 
     initial begin
-        $dumpvars(0, p);
-        #0
+        $dumpvars(0, L);
+
         clk <= 1'b0;
         #500;
         $finish;
