@@ -1,38 +1,50 @@
 
+module count(input clk, input reset, output out);
 
-    module LedPulse(
-        input in,
-        output led
-    );
+reg [31:0] aux;
 
-        always@(posedge in)
-          assign in = ~in;
+    always@(posedge clk) begin
 
-    endmodule
+        if(reset)begin
+            aux=0;
 
-
-
-    module count(
-
-        output out,
-        input clk,
-        input reset,
-        input enable
+        end else if(aux == 50 000 000) begin
+             
 
 
-    );
-        reg [31:0] aux;
+        end else begin
+            aux=aux+1;
+        end
+
+    end
 
 
-        always@(posedge clk) aux <= aux +1;
-
-        assign out=aux[31];
 
 
-    endmodule
+
+endmodule
 
 
-    module Main;
+
+module led(input clk,input In, output done, output led);
+
+        
+    always@(posedge in) begin
+        led=~led;
+        
+        end
+
+
+
+
+
+
+endmodule
+
+
+
+
+/*module Main;
 
         input clk, enable;
         wire  in, reset,enable, out, led;
@@ -44,11 +56,10 @@
 
 
 
-        //assign reset <= led;
 
 
-    endmodule
-
+  endmodule
+*/
 
 
 
