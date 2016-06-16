@@ -19,10 +19,12 @@ int main(){
     FILE *grava;
     readT=fopen("triangle.txt","r");
     readP=fopen("points.txt","r");
-    grava=fopen("Result.txt","w");
-    /*Laço de repetição*/
-    for(i=0;i<10;i++){
-        /*lê a partir de um arquivo*/
+    grava=fopen("ResultC.txt","w");
+    
+
+    for(i=0;i<10;i++)
+    {
+        
         fscanf(readT,"%i %i",&t1.x,&t1.y);
         fscanf(readT,"%i %i",&t2.x,&t2.y);
         fscanf(readT,"%i %i",&t3.x,&t3.y);
@@ -31,8 +33,9 @@ int main(){
         num1 = confPoint(p,t2,t3);
         num2 = confPoint(t1,p,t3);
         num3 = confPoint(t1,t2,p);
-        /*grava as coordenadas no arquivo Result.txt*/
-        if(num == (num1+num2+num3)){
+       
+        if(num == (num1+num2+num3))
+        {
             printf("A coordernada informada contem no triangulo\n");
             fprintf(grava,"1\n");
         }else{
