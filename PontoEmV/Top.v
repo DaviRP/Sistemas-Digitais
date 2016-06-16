@@ -35,51 +35,50 @@ module cadTri
 
 endmodule
 
-
-module   
-
-
 module teste;
-	integer Write;
+	
 	reg [10:0]x1;
 	reg [10:0]x2;
 	reg [10:0]x3;
 	reg [10:0]y1;
 	reg [10:0]y2;
 	reg [10:0]y3;
-	reg [10:0]PointX;
-	reg [10:0]PointY;
-	reg CLK;
+	reg [10:0]PX;
+	reg [10:0]PY;
+	reg clk;
 	reg rst;
-	
-	Triangle A(PointX,PointY,X_1,Y_1,X_2,Y_2,X_3,Y_3,Exit);
+	integer Write;
+
+	Triangle T(PX,PY,x1,y1,x2,y2,x3,y3,Exit);
 	
 	initial begin
 		Write = $fopen("result.txt", "w");
-		$dumpvars(0, A);
+		$dumpvars(0, T);
 			#0;
-				X_1 <=0;
-				Y_1 <=0;
-				X_2 <=10;
-				Y_2 <=0;
-				X_3 <=0;
-				Y_3 <=10;
-				PointX <=3;
-				PointY <=3;
+				x1 <=0;
+				y1 <=0;
+				x2 <=10;
+				y2 <=0;
+				x3 <=0;
+				y3 <=10;
+				PX <=3;
+				PY <=3;
 			#5;
 				$fdisplay(Write, "%d", Exit);
 			#6;
-				X_1 <=15;
-				Y_1 <=15;
-				X_2 <=30;
-				Y_2 <=0;
-				X_3 <=15;
-				Y_3 <=0;
-				PointX <=3;
-				PointY <=3;
+				x1 <=15;
+				y1 <=15;
+				x2 <=30;
+				y2 <=0;
+				x3 <=15;
+				y3 <=0;
+				PX <=3;
+				PY <=3;
 			#9;
 				$fdisplay(Write, "%d", Exit);
 			#10;
 		$finish;
 	end
 endmodule
+
+
